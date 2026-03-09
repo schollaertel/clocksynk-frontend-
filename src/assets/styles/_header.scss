@@ -1,0 +1,12 @@
+.logo-area  {
+    a {
+        display: inline-block;
+        min-width: 160px;
+        max-width: 160px;
+        margin: auto;
+        @media only screen and (max-width: 1499px) {
+            max-width: 120px;
+            min-width: 120px;
+        }
+    }
+}

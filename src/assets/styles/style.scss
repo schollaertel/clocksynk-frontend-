@@ -1,0 +1,275 @@
+// @use './all' as *;
+@import './variables';
+@import './fonts';
+@import './header';
+@import './footer';
+@import './home';
+@import './active-penalties';
+@import './score-keeper';
+@import './game-statistics';
+@import './live-stats-tracker';
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: $montserrat;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.6;
+    color: $color-white;
+   @media only screen and (max-width: 1499px) {
+        font-size: 14px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    font-family: $helveticacompressed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 10px;
+}
+
+ul,
+li,
+ol {
+    margin-bottom: 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    color: $color-white;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: 500;
+    @media only screen and (max-width: 1499px) {
+        font-size: 41px;
+    }
+    @media only screen and (max-width: 1199px) {
+        font-size: 36px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 30px;
+    }
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 500;
+    @media only screen and (max-width: 1499px) {
+        font-size: 41px;
+    }
+    @media only screen and (max-width: 1199px) {
+        font-size: 36px;
+    }
+    @media only screen and (max-width: 767px) {
+        font-size: 30px;
+    }
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+ul {
+    padding: 0;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+    border-color: $color-blue;
+}
+.mainClass {
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;      /* full window height */
+}
+.wrapper.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;      /* avoid cutting on small screens */
+}
+.container.small-container {
+    @media only screen and (min-width: 1200px) {
+        max-width:960px;
+    }
+    @media only screen and (min-width: 1360px) {
+        max-width:1050px;
+    }
+    @media only screen and (min-width: 1500px) {
+        max-width: 1140px;
+    }
+    @media only screen and (max-width: 767px) {
+        padding: 0 20px;
+    }
+    @media only screen and (max-width: 360px) {
+        padding: 0 12px;
+    }
+}
+
+.wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-attachment: fixed;
+    // background-position: center;
+}
+
+.btn {
+    border-radius: 5px;
+    padding: 13px 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    border: 0;
+    line-height: 0.8;
+    transition: all 0.5s;
+
+    &.btn-primary {
+        background: $color-orange;
+        color: $color-white;
+
+        &:hover {
+            background: $color-blue;
+        }
+    }
+
+    &.btn-secendary {
+        background: $color-green;
+        color: $color-white;
+
+        &:hover {
+            background: $color-blue;
+        }
+    }
+}
+
+.cmn-box-wrapper {
+    background: $color-3;
+    box-shadow: 0px 2px 20px 0px #0C0F1B;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+
+    &.p-36 {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+}
+
+.cmn-box {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.8) 37.37%, rgba(15, 23, 42, 0.8) 82.23%);
+    border-radius: 20px;
+    padding: 30px 120px;
+    margin-bottom: 30px;
+    position: relative;
+    @media only screen and (max-width: 1499px) {
+        padding: 30px 70px;
+    }
+     @media only screen and (max-width: 1199px) {
+        padding: 30px 12px;
+    }
+    .acc-arrow {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        background: linear-gradient(180deg, #FFFFFF 0%, #999999 100%),
+            linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        padding: 0;
+        padding-left: 1px;
+        z-index: 5;
+        &[aria-expanded="true"]{
+            transform: rotate(180deg);
+            padding-left: 0;
+        }
+        @media only screen and (max-width: 767px) {
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+    &.pt-30 {
+        padding-top: 30px;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+@media only screen and (max-width: 767px) {
+    margin-bottom: 20px;
+}
+        &:after {
+            position: absolute;
+            content: '';
+            background: url('../images/color-grow-hdr.png') no-repeat;
+            background-size: 100% 100%;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 60%;
+            height: 80px;
+            z-index: -1;
+             @media only screen and (max-width: 767px) {
+                display: none;
+             }
+        }
+    }
+}

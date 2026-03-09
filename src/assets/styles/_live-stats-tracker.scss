@@ -1,0 +1,99 @@
+.traker-wrapper {
+    padding: 20px 0;
+    @media only screen and (max-width: 767px) {
+        padding: 5px 0;
+    }
+    .traker-innr {
+        @media only screen and (max-width: 767px) {
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            &:last-child {
+                padding-bottom: 0;
+                border-bottom: 0;
+            }
+        }
+    }
+    .traker-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 10px;
+        .btn {
+            min-width: 150px;
+            gap: 5px;
+            padding: 8px 25px;
+            border-radius: 10px;
+            @media only screen and (max-width: 1499px) {
+                min-width: 130px;
+                padding: 8px 15px;
+            }
+            @media only screen and (max-width: 575px) {
+                min-width: 100px;
+                padding: 8px 10px;
+            }
+            @media only screen and (max-width: 360px) {
+                min-width: 90px;
+                padding: 7px 10px;
+            }
+            &.active {
+                background: $color-blue;
+            }
+        }
+        h6 {
+            margin-bottom: 0;
+            font-weight: 700;
+            font-size: 16px;
+            color: $color-white;
+            font-family: $helvetica;
+            @media only screen and (max-width: 1499px) {
+                font-size: 14px;
+            }
+        }
+    }
+    .traker-list {
+        li {
+            margin-bottom: 5px;
+            background: $color-gray;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .traker-icon {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.green {
+                    background: $color-green;
+                }
+                &.blue {
+                    background: $color-blue;
+                }
+                &.orange {
+                    background: $color-orange;
+                }
+            }
+            .traker-content {
+                h5 {
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    font-size: 14px;
+                    font-family: $montserrat;
+                }
+                p {
+                    margin-bottom: 0;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.footer {
+    padding: 50px 0;
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        li {
+            list-style-type: disc;
+            list-style-position: inside;
+            font-size: 14px;
+            &:first-child {
+                list-style-type: none;
+            }
+            a {
+                &:hover {
+                color: $color-orange;
+            }
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 0;
+        span {
+            color: $color-blue;
+            @media only screen and (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        a {
+            font-weight: 600;
+            color: $color-blue;
+
+            &:hover {
+                color: $color-orange;
+            }
+        }
+    }
+}
